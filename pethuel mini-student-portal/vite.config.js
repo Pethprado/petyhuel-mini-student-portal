@@ -1,0 +1,9 @@
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig(({ command }) => ({
+  plugins: [react()],
+  // GitHub Pages serves the site from /mini-student-portal/
+  base: command === 'build' ? '/mini-student-portal/' : '/',
+}))
